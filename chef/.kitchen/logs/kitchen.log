@@ -1,3 +1,0 @@
-I, [2018-05-22T14:24:03.709630 #11148]  INFO -- Kitchen: -----> Starting Kitchen (v1.20.0)
-I, [2018-05-22T14:24:04.665009 #11148]  INFO -- Kitchen: -----> Creating <default-ubuntu-1404>...
-I, [2018-05-22T14:24:09.343265 #11148]  INFO -- Kitchen: -----> Kitchen is finished. (0m5.63s)
