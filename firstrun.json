@@ -7,7 +7,7 @@
     "builders": [
         {
             "access_key": "{{user `aws_access_key`}}",
-            "ami_name": "packer-linux-aws-demo-{{timestamp}}",
+            "ami_name": "ghost-packer-{{timestamp}}",
             "instance_type": "m3.medium",
             "region": "us-east-1",
             "secret_key": "{{user `aws_secret_key`}}",
