@@ -1,0 +1,28 @@
+DEPENDENCIES
+  apt
+  ghost-install
+    path: .
+    metadata: true
+  nginx
+
+GRAPH
+  apt (7.0.0)
+  build-essential (8.1.1)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  ghost-install (0.0.1)
+    apt (>= 0.0.0)
+    nginx (>= 0.0.0)
+  mingw (2.0.2)
+    seven_zip (>= 0.0.0)
+  nginx (8.1.2)
+    build-essential (>= 0.0.0)
+    ohai (>= 4.1.0)
+    yum-epel (>= 0.0.0)
+    zypper (>= 0.0.0)
+  ohai (5.2.2)
+  seven_zip (3.0.0)
+    windows (>= 0.0.0)
+  windows (4.2.2)
+  yum-epel (3.1.0)
+  zypper (0.4.0)
