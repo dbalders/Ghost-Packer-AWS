@@ -2,6 +2,6 @@ site :opscode
 
 cookbook 'apt'
 cookbook 'nginx'
-# cookbook 'ghost-blog'
+cookbook 'nodejs'
 
 metadata

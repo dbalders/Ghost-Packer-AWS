@@ -1,0 +1,96 @@
+I, [2018-05-24T08:57:57.970041 #15116]  INFO -- default-ubuntu-1404: -----> Converging <default-ubuntu-1404>...
+I, [2018-05-24T08:57:57.970878 #15116]  INFO -- default-ubuntu-1404: Preparing files for transfer
+I, [2018-05-24T08:57:57.971071 #15116]  INFO -- default-ubuntu-1404: Preparing dna.json
+I, [2018-05-24T08:57:57.971637 #15116]  INFO -- default-ubuntu-1404: Resolving cookbook dependencies with Berkshelf 6.3.1...
+I, [2018-05-24T08:58:00.935766 #15116]  INFO -- default-ubuntu-1404: Removing non-cookbook files before transfer
+I, [2018-05-24T08:58:00.986506 #15116]  INFO -- default-ubuntu-1404: Preparing solo.rb
+I, [2018-05-24T08:58:01.239493 #15116]  INFO -- default-ubuntu-1404: -----> Chef Omnibus installation detected (install only if missing)
+I, [2018-05-24T08:58:01.260804 #15116]  INFO -- default-ubuntu-1404: Transferring files to <default-ubuntu-1404>
+I, [2018-05-24T08:58:02.598154 #15116]  INFO -- default-ubuntu-1404: Starting Chef Client, version 14.1.12
+I, [2018-05-24T08:58:03.717174 #15116]  INFO -- default-ubuntu-1404: resolving cookbooks for run list: ["ghost-install::ghost-install"]
+I, [2018-05-24T08:58:03.976712 #15116]  INFO -- default-ubuntu-1404: Synchronizing Cookbooks:
+I, [2018-05-24T08:58:03.983938 #15116]  INFO -- default-ubuntu-1404:   - ghost-install (0.0.1)
+I, [2018-05-24T08:58:03.986338 #15116]  INFO -- default-ubuntu-1404:   - build-essential (8.1.1)
+I, [2018-05-24T08:58:03.988010 #15116]  INFO -- default-ubuntu-1404:   - yum-epel (3.1.0)
+I, [2018-05-24T08:58:03.989367 #15116]  INFO -- default-ubuntu-1404:   - seven_zip (3.0.0)
+I, [2018-05-24T08:58:03.993623 #15116]  INFO -- default-ubuntu-1404:   - windows (4.2.2)
+I, [2018-05-24T08:58:03.994258 #15116]  INFO -- default-ubuntu-1404:   - apt (7.0.0)
+I, [2018-05-24T08:58:03.994864 #15116]  INFO -- default-ubuntu-1404:   - mingw (2.0.2)
+I, [2018-05-24T08:58:03.995294 #15116]  INFO -- default-ubuntu-1404:   - zypper (0.4.0)
+I, [2018-05-24T08:58:03.995857 #15116]  INFO -- default-ubuntu-1404:   - ohai (5.2.2)
+I, [2018-05-24T08:58:03.996433 #15116]  INFO -- default-ubuntu-1404:   - nginx (8.1.2)
+I, [2018-05-24T08:58:03.996844 #15116]  INFO -- default-ubuntu-1404: Installing Cookbook Gems:
+I, [2018-05-24T08:58:04.031049 #15116]  INFO -- default-ubuntu-1404: Compiling Cookbooks...
+I, [2018-05-24T08:58:04.125922 #15116]  INFO -- default-ubuntu-1404: Recipe: nginx::ohai_plugin
+I, [2018-05-24T08:58:04.127968 #15116]  INFO -- default-ubuntu-1404:   * ohai_plugin[nginx] action create[2018-05-24T15:58:04+00:00] WARN: The Ohai plugin_path does not include /tmp/kitchen/ohai/plugins. Ohai will reload on each chef-client run in order to add this directory to the path unless you modify your client.rb configuration to add this directory to plugin_path. The plugin_path can be set via the chef-client::config recipe. See 'Ohai Settings' at https://docs.chef.io/config_rb_client.html#ohai-settings for more details.
+I, [2018-05-24T08:58:04.128218 #15116]  INFO -- default-ubuntu-1404: [2018-05-24T15:58:04+00:00] WARN: Adding /tmp/kitchen/ohai/plugins to the Ohai plugin path for this chef-client run only
+I, [2018-05-24T08:58:04.128876 #15116]  INFO -- default-ubuntu-1404: 
+I, [2018-05-24T08:58:04.129644 #15116]  INFO -- default-ubuntu-1404:     * directory[/tmp/kitchen/ohai/plugins] action create (skipped due to not_if)
+I, [2018-05-24T08:58:04.133641 #15116]  INFO -- default-ubuntu-1404:     * template[/tmp/kitchen/ohai/plugins/nginx.rb] action create (up to date)
+I, [2018-05-24T08:58:05.244752 #15116]  INFO -- default-ubuntu-1404:     * ohai[nginx] action reload
+I, [2018-05-24T08:58:05.245222 #15116]  INFO -- default-ubuntu-1404:       - re-run ohai and merge results into node attributes
+I, [2018-05-24T08:58:05.245820 #15116]  INFO -- default-ubuntu-1404:   
+I, [2018-05-24T08:58:05.258328 #15116]  INFO -- default-ubuntu-1404:   Converging 31 resources
+I, [2018-05-24T08:58:05.259771 #15116]  INFO -- default-ubuntu-1404: Recipe: apt::default
+I, [2018-05-24T08:58:05.260713 #15116]  INFO -- default-ubuntu-1404:   * file[/var/lib/apt/periodic/update-success-stamp] action nothing (skipped due to action :nothing)
+I, [2018-05-24T08:58:05.262076 #15116]  INFO -- default-ubuntu-1404:   * apt_update[periodic] action periodic (up to date)
+I, [2018-05-24T08:58:05.263324 #15116]  INFO -- default-ubuntu-1404:   * execute[apt-get update] action nothing (skipped due to action :nothing)
+I, [2018-05-24T08:58:05.264145 #15116]  INFO -- default-ubuntu-1404:   * execute[apt-get autoremove] action nothing (skipped due to action :nothing)
+I, [2018-05-24T08:58:05.264963 #15116]  INFO -- default-ubuntu-1404:   * execute[apt-get autoclean] action nothing (skipped due to action :nothing)
+I, [2018-05-24T08:58:05.268973 #15116]  INFO -- default-ubuntu-1404:   * directory[/var/cache/local] action create (up to date)
+I, [2018-05-24T08:58:05.273532 #15116]  INFO -- default-ubuntu-1404:   * directory[/var/cache/local/preseeding] action create (up to date)
+I, [2018-05-24T08:58:05.280511 #15116]  INFO -- default-ubuntu-1404:   * template[/etc/apt/apt.conf.d/10dpkg-options] action create (up to date)
+I, [2018-05-24T08:58:05.288036 #15116]  INFO -- default-ubuntu-1404:   * template[/etc/apt/apt.conf.d/10recommends] action create (up to date)
+I, [2018-05-24T08:58:05.331950 #15116]  INFO -- default-ubuntu-1404:   * apt_package[apt-transport-https] action install (up to date)
+I, [2018-05-24T08:58:05.332517 #15116]  INFO -- default-ubuntu-1404: Recipe: nginx::default
+I, [2018-05-24T08:58:05.337643 #15116]  INFO -- default-ubuntu-1404:   * nginx_cleanup_runit[cleanup] action cleanup
+I, [2018-05-24T08:58:05.338618 #15116]  INFO -- default-ubuntu-1404:     * file[remove symlinked runit init script] action delete (skipped due to only_if)
+I, [2018-05-24T08:58:05.339963 #15116]  INFO -- default-ubuntu-1404:     * execute[kill old nginx process] action run (skipped due to not_if)
+I, [2018-05-24T08:58:05.342134 #15116]  INFO -- default-ubuntu-1404:     * directory[/etc/sv/nginx] action delete (up to date)
+I, [2018-05-24T08:58:05.342651 #15116]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2018-05-24T08:58:05.342980 #15116]  INFO -- default-ubuntu-1404: Recipe: nginx::ohai_plugin
+I, [2018-05-24T08:58:05.343745 #15116]  INFO -- default-ubuntu-1404:   * ohai[reload_nginx] action nothing (skipped due to action :nothing)
+I, [2018-05-24T08:58:05.346345 #15116]  INFO -- default-ubuntu-1404:   * ohai_plugin[nginx] action create
+I, [2018-05-24T08:58:05.347785 #15116]  INFO -- default-ubuntu-1404:     * directory[/tmp/kitchen/ohai/plugins] action create (skipped due to not_if)
+I, [2018-05-24T08:58:05.353652 #15116]  INFO -- default-ubuntu-1404:     * template[/tmp/kitchen/ohai/plugins/nginx.rb] action create (up to date)
+I, [2018-05-24T08:58:05.354972 #15116]  INFO -- default-ubuntu-1404:     * ohai[nginx] action nothing (skipped due to action :nothing)
+I, [2018-05-24T08:58:05.355476 #15116]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2018-05-24T08:58:05.355971 #15116]  INFO -- default-ubuntu-1404: Recipe: nginx::repo
+I, [2018-05-24T08:58:05.359713 #15116]  INFO -- default-ubuntu-1404:   * apt_repository[nginx] action add
+I, [2018-05-24T08:58:05.465059 #15116]  INFO -- default-ubuntu-1404:     * remote_file[/tmp/kitchen/cache/https___nginx_org_keys_nginx_signing_key] action create (up to date)
+I, [2018-05-24T08:58:05.569418 #15116]  INFO -- default-ubuntu-1404:     * execute[apt-key add /tmp/kitchen/cache/https___nginx_org_keys_nginx_signing_key] action run (skipped due to not_if)
+I, [2018-05-24T08:58:05.570508 #15116]  INFO -- default-ubuntu-1404:     * execute[apt-cache gencaches] action nothing (skipped due to action :nothing)
+I, [2018-05-24T08:58:05.571533 #15116]  INFO -- default-ubuntu-1404:     * apt_update[nginx] action nothing (skipped due to action :nothing)
+I, [2018-05-24T08:58:05.577298 #15116]  INFO -- default-ubuntu-1404:     * file[/etc/apt/sources.list.d/nginx.list] action create (up to date)
+I, [2018-05-24T08:58:05.577939 #15116]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2018-05-24T08:58:05.578191 #15116]  INFO -- default-ubuntu-1404: Recipe: nginx::package
+I, [2018-05-24T08:58:05.622363 #15116]  INFO -- default-ubuntu-1404:   * apt_package[nginx] action install (up to date)
+I, [2018-05-24T08:58:05.623285 #15116]  INFO -- default-ubuntu-1404: Recipe: nginx::commons_dir
+I, [2018-05-24T08:58:05.626280 #15116]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx] action create (up to date)
+I, [2018-05-24T08:58:05.629736 #15116]  INFO -- default-ubuntu-1404:   * directory[/var/log/nginx] action create (up to date)
+I, [2018-05-24T08:58:05.632943 #15116]  INFO -- default-ubuntu-1404:   * directory[pid file directory] action create (up to date)
+I, [2018-05-24T08:58:05.635294 #15116]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx/sites-available] action create (up to date)
+I, [2018-05-24T08:58:05.637732 #15116]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx/sites-enabled] action create (up to date)
+I, [2018-05-24T08:58:05.640044 #15116]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx/conf.d] action create (up to date)
+I, [2018-05-24T08:58:05.642214 #15116]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx/streams-available] action create (up to date)
+I, [2018-05-24T08:58:05.644298 #15116]  INFO -- default-ubuntu-1404:   * directory[/etc/nginx/streams-enabled] action create (up to date)
+I, [2018-05-24T08:58:05.644717 #15116]  INFO -- default-ubuntu-1404: Recipe: nginx::commons_script
+I, [2018-05-24T08:58:05.649224 #15116]  INFO -- default-ubuntu-1404:   * template[/usr/sbin/nxensite] action create (up to date)
+I, [2018-05-24T08:58:05.663485 #15116]  INFO -- default-ubuntu-1404:   * template[/usr/sbin/nxdissite] action create (up to date)
+I, [2018-05-24T08:58:05.667668 #15116]  INFO -- default-ubuntu-1404:   * template[/usr/sbin/nxenstream] action create (up to date)
+I, [2018-05-24T08:58:05.671611 #15116]  INFO -- default-ubuntu-1404:   * template[/usr/sbin/nxdisstream] action create (up to date)
+I, [2018-05-24T08:58:05.672145 #15116]  INFO -- default-ubuntu-1404: Recipe: nginx::commons_conf
+I, [2018-05-24T08:58:05.679398 #15116]  INFO -- default-ubuntu-1404:   * template[nginx.conf] action create (up to date)
+I, [2018-05-24T08:58:05.682923 #15116]  INFO -- default-ubuntu-1404:   * template[/etc/nginx/sites-available/default] action create (up to date)
+I, [2018-05-24T08:58:05.684791 #15116]  INFO -- default-ubuntu-1404:   * nginx_site[default] action enable
+I, [2018-05-24T08:58:05.685764 #15116]  INFO -- default-ubuntu-1404:     * execute[nxensite default] action run (skipped due to not_if)
+I, [2018-05-24T08:58:05.686301 #15116]  INFO -- default-ubuntu-1404:      (up to date)
+I, [2018-05-24T08:58:05.686779 #15116]  INFO -- default-ubuntu-1404: Recipe: nginx::package
+I, [2018-05-24T08:58:05.718374 #15116]  INFO -- default-ubuntu-1404:   * service[nginx] action start (up to date)
+I, [2018-05-24T08:58:05.750122 #15116]  INFO -- default-ubuntu-1404:   * service[nginx] action enable (up to date)
+I, [2018-05-24T08:58:05.809868 #15116]  INFO -- default-ubuntu-1404: 
+I, [2018-05-24T08:58:05.810102 #15116]  INFO -- default-ubuntu-1404: Running handlers:
+I, [2018-05-24T08:58:05.810428 #15116]  INFO -- default-ubuntu-1404: Running handlers complete
+I, [2018-05-24T08:58:05.811069 #15116]  INFO -- default-ubuntu-1404: Chef Client finished, 2/48 resources updated in 03 seconds
+I, [2018-05-24T08:58:05.820410 #15116]  INFO -- default-ubuntu-1404: Downloading files from <default-ubuntu-1404>
+I, [2018-05-24T08:58:05.858321 #15116]  INFO -- default-ubuntu-1404: Finished converging <default-ubuntu-1404> (0m7.89s).

@@ -1,0 +1,45 @@
+{
+    "variables": {
+        "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+        "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
+        "aws_vpc_id": "{{env `AWS_VPC_ID`}}",
+        "aws_subnet_id": "{{env `AWS_SUBNET_ID`}}",
+        "region":         "us-east-1"
+    },
+    "builders": [
+        {
+            "access_key": "{{user `aws_access_key`}}",
+            "ami_name": "ghost-packer-{{timestamp}}",
+            "instance_type": "t2.small",
+            "region": "{{user `region`}}",
+            "spot_price": "auto",
+            "spot_price_auto_product": "Linux/UNIX (Amazon VPC)",
+            "vpc_id": "{{user `aws_vpc_id`}}",
+            "subnet_id": "{{user `aws_subnet_id`}}",
+            "associate_public_ip_address":"true",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "source_ami_filter": {
+              "filters": {
+              "virtualization-type": "hvm",
+              "name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
+              "root-device-type": "ebs"
+              },
+              "owners": ["099720109477"],
+              "most_recent": true
+            },
+            "ssh_username": "ubuntu",
+            "type": "amazon-ebs"
+        }
+    ],
+    "provisioners": [
+        { 
+            "type": "chef-solo",
+            "cookbook_paths": [ "chef/berks-cookbooks" ]
+        },
+        {
+            "type": "shell",
+            "script": "./scripts/setup.sh"
+        }
+
+    ]
+}

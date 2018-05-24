@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "apt": ">= 0.0.0",
-    "nginx": ">= 0.0.0"
+    "nginx": ">= 0.0.0",
+    "ghost-install": ">= 0.0.0"
   },
   "recommendations": {
   },
