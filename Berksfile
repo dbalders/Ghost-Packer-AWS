@@ -1,7 +1,3 @@
-site :opscode
-
-cookbook 'apt'
-cookbook 'nginx'
-cookbook 'nodejs'
+source 'https://supermarket.chef.io'
 
 metadata

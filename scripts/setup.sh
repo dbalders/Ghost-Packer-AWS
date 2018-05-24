@@ -11,6 +11,6 @@ sudo npm i -g ghost-cli
 sudo mkdir -p /var/www/ghost
 sudo chown ubuntu:ubuntu /var/www/ghost
 sudo chmod 775 /var/www/ghost
-ghost install -d /var/www/ghost --no-prompt --ip '0.0.0.0' --db sqlite3 --url http://localhost.com --port 2368 --db-path ./content/data/ghost.db
+ghost install -d /var/www/ghost --no-prompt --ip '0.0.0.0' --db sqlite3 --url http://localhost --port 2368 --db-path ./content/data/ghost.db
 
 echo "setup.sh DONE"
