@@ -4,7 +4,7 @@ driver:
   network:
     - ["forwarded_port", {guest: 80, host: 8080}]
     - ["forwarded_port", {guest: 2368, host: 2368}]
-    - ["forwarded_port", {guest: 2368, host: 80}]
+    - ["forwarded_port", {guest: 80, host: 80}]
 
 provisioner:
   name: chef_solo
@@ -17,6 +17,9 @@ verifier:
 
 suites:
   - name: default
+    verifier:
+        inspec_tests:
+          - test/integration/default
     run_list:
       - recipe[ghost-install]
     attributes:

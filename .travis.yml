@@ -1,0 +1,23 @@
+sudo: required
+
+notifications:
+  email:
+    on_success: never
+    on_failure: dbalders@gmail.com
+
+addons:
+  apt:
+    sources:
+      - chef-current-trusty
+    packages:
+      - chefdk
+
+install: bundle install
+
+services: vagrant
+
+env:
+  matrix:
+  - INSTANCE=ubuntu-1604
+
+script: kitchen verify ${INSTANCE}
