@@ -20,4 +20,4 @@ env:
   matrix:
   - INSTANCE=ubuntu-1604
 
-script: KITCHEN_LOCAL_YAML=.kitchen.yml kitchen verify ${INSTANCE}
+script: KITCHEN_LOCAL_YAML=.kitchen.local.yml kitchen verify ${INSTANCE}
