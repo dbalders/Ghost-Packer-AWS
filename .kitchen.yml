@@ -1,6 +1,8 @@
 ---
 driver:
-  name: vagrant
+  name: docker
+  use_sudo: false
+  provision_command: mkdir -p /run/sshd
   network:
     - ["forwarded_port", {guest: 80, host: 8080}]
     - ["forwarded_port", {guest: 2368, host: 2368}]
@@ -23,3 +25,7 @@ suites:
     run_list:
       - recipe[ghost-install]
     attributes:
+      # authorization:
+      #   sudo:
+      #     passwordless: true
+      #     include_sudoers_d: true

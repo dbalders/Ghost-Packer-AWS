@@ -1,9 +1,9 @@
 ---
 username: kitchen
 ssh_key: "/Users/davidbalderston/GitHub/Packer/ghost-aws/.kitchen/docker_id_rsa"
-image_id: 7e8418884be1
-container_id: c205e4556369d1c94e01ed3bcf9dd3abbad9795f7418ece31c482bc0527b4f7b
+image_id: bcb11e2a4299
+container_id: 43f0859a77b8cadc58d0c3dd60ab0564463bb1bb6d8be0e15361bc9f5ba79dc4
 hostname: localhost
-port: 32778
+port: 32774
 last_action: create
 last_error: Kitchen::ActionFailed

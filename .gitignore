@@ -1,3 +1,7 @@
 
 *.log.kitchen/
 .kitchen.local.yml
+
+.kitchen/docker_id_rsa
+
+.kitchen/docker_id_rsa.pub

@@ -1,7 +1,10 @@
 include_recipe 'apt'
 include_recipe 'nginx'
 include_recipe 'nodejs'
-include_recipe 'sudo'
+
+execute 'apt-get update' do
+  command 'apt-get update'
+end
 
 npm_package 'ghost-cli'
 
@@ -34,7 +37,7 @@ directory '/var/www/ghost' do
   recursive true
 end
 
-directory '/home/vagrant/.ghost' do
+directory '/home/kitchen/.ghost' do
   owner 'ghost'
   group 'ghost'
   mode '777'
@@ -42,7 +45,7 @@ directory '/home/vagrant/.ghost' do
   recursive true
 end
 
-execute 'download and install' do
-  command "ghost install -d /var/www/ghost --no-prompt --ip '0.0.0.0' --db sqlite3 --url http://127.0.0.1 --port 2368 --db-path ./content/data/ghost.db --start"
+execute 'download and install ghost' do
+  command "ghost install -d /var/www/ghost --no-prompt --no-start --ip '0.0.0.0' --db sqlite3 --url http://127.0.0.1 --port 2368 --db-path ./content/data/ghost.db --no-setup-systemd"
   user 'www_ghost'
 end
