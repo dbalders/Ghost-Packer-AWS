@@ -20,3 +20,5 @@ services: docker
 env:
   matrix:
   - INSTANCE=ubuntu-1604
+
+script: bundle exec rake deploy
