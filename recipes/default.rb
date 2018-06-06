@@ -7,6 +7,7 @@ execute 'apt-get update' do
 end
 
 npm_package 'ghost-cli'
+package 'net-tools'
 
 user 'www_ghost' do 
   manage_home true

@@ -9,18 +9,18 @@ control 'Ghost' do
 		end
 	end
 
-	%w(ghost_127-0-0-1 nginx).each do |service|
-		describe service("#{service}") do
-			it { should be_installed }
-			it { should be_enabled }
-			it { should be_running }
-		end
-	end
+	# %w(ghost_127-0-0-1 nginx).each do |service|
+	# 	describe service("#{service}") do
+	# 		it { should be_installed }
+	# 		it { should be_enabled }
+	# 		it { should be_running }
+	# 	end
+	# end
 
-	%w(80 2368).each do |port|
-		describe port("#{port}") do
-			it { should be_listening }
-		end
-	end
+	# %w(80 2368 8080).each do |port|
+	# 	describe port("#{port}") do
+	# 		it { should be_listening }
+	# 	end
+	# end
 
 end
